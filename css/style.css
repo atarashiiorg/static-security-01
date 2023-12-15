@@ -5,25 +5,28 @@
 
 header{
     position: sticky;
-    height: 70px;
+    height: fit-content;
     width: 100%;
+    box-shadow: 1px 1px 3px 8px rgb(240, 240, 240);
 }
 
 nav{
     display: flex;
     justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
 }
 
 .logo{
     display: flex;
     gap: 5px;
     justify-content: center;
+    align-items: center;
 }
 
 .logo>img{
-    width: 50px;
-    height: 50px;
-    background-color: gold;
+    width: 90px;
+    height: 70px;
 }
 
 .nav-links>ul{
@@ -36,6 +39,7 @@ nav{
 
 .nav-links>ul>li>a{
     text-decoration: none;
+    color: black;
 }
 
 .main{
@@ -51,7 +55,6 @@ nav{
     flex-direction: column;
     flex-wrap: wrap;
     gap: 30px;
-    background-image: url('./images/padlock.svg');
 }
 
 .card{
@@ -67,6 +70,7 @@ nav{
 .content{
     width: 65%;
     line-height: 30px;
+    text-align: center;
 }
 
 .imgs{
@@ -87,11 +91,27 @@ nav{
     gap: 70px;
     height: 500px;
     background-color: #242424;
+    color: #fff;
+    align-items: center;
 }
 
 .services{
     display: flex;
     gap: 40px;
+    align-items: center;
+}
+
+.services>span{
+    display: block;
+    width: 100%;
+}
+
+.services>span>i{
+    text-align: center;
+}
+
+.fa-solid{
+    color: gold;
 }
 
 .contact{
@@ -102,6 +122,7 @@ nav{
     justify-content: center;
     box-shadow: 1px 2px 3px 8px #eee;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .sub-contact{
