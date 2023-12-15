@@ -95,8 +95,13 @@ nav{
 }
 
 .contact{
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    /* align-items: center; */
     justify-content: center;
+    box-shadow: 1px 2px 3px 8px #eee;
+    border-radius: 5px;
 }
 
 .sub-contact{
@@ -106,7 +111,6 @@ nav{
     gap: 40px;
     width: 100%;
     padding: 30px;
-    box-shadow: 1px 2px 3px 8px #eee;
 }
 
 .sub-contact>button{
@@ -115,4 +119,35 @@ nav{
     width: 200px;
     height: 60px;
     border-radius: 15px;
+}
+
+.contactFormDiv{
+    width: 400px;
+    margin: 10px auto 30px auto;
+    height: 350px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formItem{
+    width: 90%;
+    margin-bottom: 14px;
+    display: flex;
+}
+
+.formItem>input, .formItem>textarea, .formItem>select{
+    color: black;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.contactFormDiv>input{
+    padding: 9px 10px;
+    width: 90%;
+    color: white;
+    font-size: 15px;
+    background-color: navy;
+    border: none;
+    border-radius: 5px;
 }

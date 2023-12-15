@@ -26,3 +26,18 @@ imgs.forEach((the_img) => {
   });
 
 }); //end foreach
+
+//for contact form 
+const contactForm = document.getElementById("contactFormDiv")
+const closeBtnIcon  = document.getElementById("contactBtnIcon")
+function openContactForm(){
+  if(closeBtnIcon.classList.contains("fa-chevron-down")){
+    closeBtnIcon.classList.remove("fa-chevron-down")
+    closeBtnIcon.classList.add("fa-chevron-up")
+    contactForm.style.display = "flex"
+  } else {
+    closeBtnIcon.classList.remove("fa-chevron-up")
+    closeBtnIcon.classList.add("fa-chevron-down")
+    contactForm.style.display = "none"
+  }
+}
