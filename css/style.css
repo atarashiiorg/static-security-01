@@ -26,11 +26,25 @@ header{
     background: #fff;
 }
 
-nav{
+.nav{
     display: flex;
     justify-content: space-between;
     padding: 5px 20px;
     align-items: center;
+    transition: 0.5s;
+}
+
+nav.scroll {
+    display: flex;
+    justify-content: space-between;
+    background-color: #131313;
+    padding: 5px 20px;
+    align-items: center;
+    transition: 0.5s;
+    
+    .nav-items>a{
+        color: goldenrod;
+    }
 }
 
 .logo{
@@ -54,6 +68,7 @@ nav{
 }
 
 .nav-items>a{
+    font-size: 18px;
     text-decoration: none;
     color: black;
 }
@@ -169,6 +184,8 @@ nav{
 .sub-contact>button{
     border: none;
     background-color: goldenrod;
+    color: #fff;
+    font-size: 15px;
     width: 200px;
     height: 60px;
     border-radius: 15px;
@@ -224,6 +241,33 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    color: #fff;
+}
+
+.footer>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer>div>.logo>img{
+    width: 250px;
+    height: 200px;
+}
+
+.copyright{
+    align-self: center;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.company-name>h2{
+    font-size: 25px;
 }
 
 .footer-links>ul{
@@ -231,6 +275,7 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: #000;
 }
 
 
