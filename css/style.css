@@ -3,17 +3,23 @@
     padding: 0;
 }
 
+body{
+    background: #eee;
+}
+
 header{
     position: sticky;
+    position: -webkit-sticky;
+    top: 0;
     height: fit-content;
     width: 100%;
-    box-shadow: 1px 1px 3px 8px rgb(240, 240, 240);
+    background: #fff;
 }
 
 nav{
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 5px 20px;
     align-items: center;
 }
 
@@ -37,7 +43,7 @@ nav{
     list-style: none;
 }
 
-.nav-links>ul>li>a{
+.nav-items>a{
     text-decoration: none;
     color: black;
 }
@@ -63,14 +69,21 @@ nav{
     width: fit-content;
     padding: 20px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 1px 2px 3px 8px #eee;
+    background: #fff;
+    box-shadow: 1px 2px 3px 8px #fff;
 }
 
 .content{
     width: 65%;
     line-height: 30px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content>h2{
+    font-size: 30px;
 }
 
 .imgs{
@@ -89,10 +102,16 @@ nav{
     flex-direction: column;
     flex-wrap: wrap;
     gap: 70px;
+    padding: 20px 20px;
     height: 500px;
     background-color: #242424;
     color: #fff;
     align-items: center;
+}
+
+.heading{
+    font-size: 40px;
+    color: goldenrod;
 }
 
 .services{
@@ -101,17 +120,20 @@ nav{
     align-items: center;
 }
 
-.services>span{
-    display: block;
-    width: 100%;
-}
-
-.services>span>i{
+.services-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     text-align: center;
 }
 
 .fa-solid{
     color: gold;
+}
+
+.services-details>p{
+    color: white;
+    font-size: 20px;
 }
 
 .contact{
@@ -136,7 +158,7 @@ nav{
 
 .sub-contact>button{
     border: none;
-    background-color: gold;
+    background-color: goldenrod;
     width: 200px;
     height: 60px;
     border-radius: 15px;
@@ -145,7 +167,7 @@ nav{
 .contactFormDiv{
     width: 400px;
     margin: 10px auto 30px auto;
-    height: 350px;
+    height: fit-content;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -161,14 +183,31 @@ nav{
     color: black;
     width: 100%;
     padding: 5px 10px;
+    border: 1px solid #888;
+    outline: none;
 }
 
-.contactFormDiv>input{
+.formItem>input{
+    height: 25px;
+    border-radius: 5px;
+}
+
+.formItem>select{
+    height: 35px;
+    border-radius: 5px;
+}
+
+.contactFormDiv>input[type="submit"]{
     padding: 9px 10px;
     width: 90%;
+    height: 40px;
     color: white;
     font-size: 15px;
     background-color: navy;
     border: none;
     border-radius: 5px;
+}
+
+.footer{
+    background-color: goldenrod;
 }
