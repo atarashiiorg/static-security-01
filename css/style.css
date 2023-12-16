@@ -29,6 +29,8 @@ header{
 .nav{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 10px 10px;
     align-items: center;
     transition: 0.5s;
@@ -37,13 +39,16 @@ header{
 nav.scroll {
     display: flex;
     justify-content: space-between;
-    background-color: #131313;
+    background-color: #161616;
     padding: 10px 10px;
     align-items: center;
     transition: 0.5s;
     
-    .nav-items>a{
+    .logo>h1{
         color: goldenrod;
+    }
+    .nav-items>a{
+        color: #fff;
     }
 }
 
@@ -92,6 +97,7 @@ nav.scroll {
     display: flex;
     gap: 20px;
     width: fit-content;
+    flex-wrap: wrap;
     padding: 20px;
     border-radius: 15px;
     background: #fff;
@@ -125,7 +131,7 @@ nav.scroll {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 70px;
+    gap: 100px;
     padding: 20px 20px;
     height: 500px;
     background-color: #242424;
@@ -162,7 +168,7 @@ nav.scroll {
 }
 
 .contact{
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -359,3 +365,34 @@ nav.scroll {
     from {opacity: .4} 
     to {opacity: 1}
   }
+
+@media screen and (max-width: 400px) {
+    
+    header{
+        width: 460px;
+    }
+    .card{
+        width: 400px;
+    }
+    .our-services{
+        width: 400px;
+        text-align: center;
+        line-break: anywhere;
+        overflow:auto;
+    }
+    .main{
+        width: fit-content;
+    }
+    .container{
+        width: fit-content;
+    }
+    .content{
+        width: 100%;
+    }
+    .imgs{
+        width: 100%;
+    }
+    .footer{
+        width: 100%;
+    }
+}

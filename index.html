@@ -14,6 +14,7 @@
         <nav class="nav" id="nav">
             <div class="logo">
                 <img src="./images/main_logo_no_background.png" alt="">
+                <h1 id="comp-name">Tactical Protection Solutions</h1>
             </div>
             <div class="nav-links">
                 <ul>
@@ -197,37 +198,51 @@
             contactForm.style.display = "none"
         }
     }
+
     let slideIndex = 1;
-showSlides(slideIndex);
+    showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+    setInterval(plusSlides,2000)
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+    function plusSlides(n=1) {
+    showSlides(slideIndex += n);
+    }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+
+    if (n < 1) {slideIndex = slides.length}
+    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
 
 
 window.onscroll = () => {
-  const nav = document.querySelector('#nav');
-  if(this.scrollY <= 10) nav.className = 'nav'; else nav.className = 'scroll';
+    const nav = document.querySelector('#nav');
+    if(this.scrollY <= 10) {
+        nav.className = 'nav';
+        document.querySelector("#comp-name").innerHTML = "Tactical Protection Solution";
+    }
+    else 
+    {
+        nav.className = 'scroll' 
+        document.querySelector("#comp-name").innerHTML = "TPS";
+    }
 };
 </script>
 
